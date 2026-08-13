@@ -11,7 +11,7 @@
     
     <style>
         /* ============================================================
-           ROOT & RESET
+           ROOT & RESET - ESTILO PORTFÓLIO
            ============================================================ */
         * {
             margin: 0;
@@ -21,7 +21,7 @@
 
         :root {
             --bg: #0a1628;
-            --surface: rgba(255, 255, 255, 0.04);
+            --surface: rgba(255, 255, 255, 0.05);
             --surface-hover: rgba(255, 255, 255, 0.08);
             --text: #e2e8f0;
             --text-light: #94a3b8;
@@ -68,7 +68,7 @@
         }
 
         /* ============================================================
-           ANIMAÇÕES
+           ANIMAÇÕES - ESTILO PORTFÓLIO
            ============================================================ */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(40px) scale(0.96); }
@@ -86,19 +86,9 @@
             50% { box-shadow: 0 0 80px rgba(0, 212, 255, 0.15); }
         }
 
-        @keyframes shimmer {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
-        }
-
         @keyframes tiltIn {
             0% { opacity: 0; transform: perspective(800px) rotateX(-15deg) rotateY(15deg) translateY(40px); }
             100% { opacity: 1; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0); }
-        }
-
-        @keyframes particleFloat {
-            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
-            50% { transform: translateY(-30px) scale(1.2); opacity: 0.8; }
         }
 
         @keyframes borderGlow {
@@ -142,7 +132,7 @@
         }
 
         /* ============================================================
-           HEADER
+           HEADER - ESTILO PORTFÓLIO
            ============================================================ */
         .navbar {
             position: sticky;
@@ -276,15 +266,6 @@
             overflow: hidden;
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 50px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -372,7 +353,7 @@
         }
 
         /* ============================================================
-           HERO
+           HERO - ESTILO PORTFÓLIO
            ============================================================ */
         .hero {
             padding: 80px 0 60px;
@@ -502,7 +483,6 @@
             font-weight: 500;
         }
 
-        /* Hero Avatar 3D */
         .hero-avatar {
             width: 340px;
             height: 340px;
@@ -540,7 +520,7 @@
         }
 
         /* ============================================================
-           TRUST BAR
+           TRUST BAR - ESTILO PORTFÓLIO
            ============================================================ */
         .trust-bar {
             margin-top: -18px;
@@ -590,7 +570,7 @@
         }
 
         /* ============================================================
-           SEÇÕES
+           SEÇÕES - ESTILO PORTFÓLIO
            ============================================================ */
         .section {
             padding: 90px 0;
@@ -647,7 +627,7 @@
         }
 
         /* ============================================================
-           SOBRE
+           SOBRE - ESTILO PORTFÓLIO
            ============================================================ */
         .about-grid {
             display: grid;
@@ -754,7 +734,7 @@
         }
 
         /* ============================================================
-           SERVIÇOS
+           SERVIÇOS - ESTILO PORTFÓLIO
            ============================================================ */
         .services-grid {
             display: grid;
@@ -812,7 +792,7 @@
         }
 
         /* ============================================================
-           PROJETOS
+           PROJETOS - ESTILO PORTFÓLIO
            ============================================================ */
         .projects-grid {
             display: grid;
@@ -888,7 +868,7 @@
         }
 
         /* ============================================================
-           CATÁLOGO
+           CATÁLOGO - ESTILO PORTFÓLIO
            ============================================================ */
         .catalog-grid {
             display: grid;
@@ -943,7 +923,7 @@
         }
 
         /* ============================================================
-           CLÍNICAS (Destaque especial)
+           CLÍNICAS - ESTILO PORTFÓLIO
            ============================================================ */
         .clinic-wrap {
             background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(124, 58, 237, 0.04));
@@ -1005,7 +985,7 @@
         }
 
         /* ============================================================
-           DEPOIMENTOS
+           DEPOIMENTOS - ESTILO PORTFÓLIO
            ============================================================ */
         .testimonials-grid {
             display: grid;
@@ -1052,7 +1032,7 @@
         }
 
         /* ============================================================
-           CTA
+           CTA - ESTILO PORTFÓLIO
            ============================================================ */
         .cta {
             background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(124, 58, 237, 0.04));
@@ -1091,7 +1071,7 @@
         }
 
         /* ============================================================
-           FOOTER
+           FOOTER - ESTILO PORTFÓLIO
            ============================================================ */
         .footer {
             background: rgba(10, 22, 40, 0.95);
@@ -2011,7 +1991,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Fecha mobile ao clicar em um link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
