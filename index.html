@@ -91,11 +91,6 @@
             100% { opacity: 1; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0); }
         }
 
-        @keyframes borderGlow {
-            0%, 100% { border-color: rgba(0, 212, 255, 0.1); }
-            50% { border-color: rgba(0, 212, 255, 0.4); }
-        }
-
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -287,6 +282,17 @@
             background: var(--surface-hover);
             transform: translateY(-3px);
             border-color: var(--primary);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            color: white;
+            box-shadow: 0 4px 24px rgba(245, 158, 11, 0.15);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(245, 158, 11, 0.25);
         }
 
         .btn-glow {
@@ -792,7 +798,7 @@
         }
 
         /* ============================================================
-           PROJETOS - ESTILO PORTFÓLIO
+           PROJETOS - ESTILO PORTFÓLIO (AMPLIADO)
            ============================================================ */
         .projects-grid {
             display: grid;
@@ -848,13 +854,30 @@
         .project-content p {
             color: var(--text-light);
             font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .project-content .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .project-content .project-link:hover {
+            color: var(--accent);
+            transform: translateX(4px);
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 12px;
+            margin-top: 10px;
         }
 
         .project-tags span {
@@ -1486,13 +1509,15 @@
                     </div>
                     <h1 class="reveal">Transformo ideias em <span class="highlight">presença digital</span></h1>
                     <p class="subtitle reveal">Sites, catálogos, páginas e dashboards</p>
-                    <p class="bio reveal">Crio soluções digitais com visual moderno e foco em resultado. <strong style="color: var(--primary);">+54 projetos</strong> já concluídos para pequenos negócios.</p>
+                    <p class="bio reveal">Crio soluções digitais com visual moderno e foco em resultado. <strong style="color: var(--primary);">+60 projetos</strong> já concluídos para pequenos negócios e órgãos públicos.</p>
 
                     <div class="hero-tags reveal">
-                        <span class="hero-tag"><i class="fas fa-code"></i> Sites Profissionais</span>
+                        <span class="hero-tag"><i class="fas fa-code"></i> Sites & Páginas</span>
                         <span class="hero-tag"><i class="fas fa-mobile-screen"></i> Catálogos Digitais</span>
                         <span class="hero-tag"><i class="fas fa-hospital-user"></i> Páginas para Clínicas</span>
                         <span class="hero-tag"><i class="fas fa-chart-line"></i> Dashboards</span>
+                        <span class="hero-tag"><i class="fas fa-file-alt"></i> Currículos</span>
+                        <span class="hero-tag"><i class="fas fa-address-book"></i> Contatos</span>
                     </div>
 
                     <div class="hero-actions reveal">
@@ -1502,7 +1527,7 @@
 
                     <div class="hero-stats reveal">
                         <div class="stat">
-                            <h3>54+</h3>
+                            <h3>60+</h3>
                             <p>Projetos</p>
                         </div>
                         <div class="stat">
@@ -1561,11 +1586,13 @@
                 <div class="about-copy reveal">
                     <div class="section-kicker"><i class="fa-solid fa-user-tie"></i> Sobre mim</div>
                     <h2>Oi, sou a <span>Ana</span></h2>
-                    <p>Tecnóloga em Ciência de Dados, especialista em criar páginas, catálogos e ferramentas digitais com visual moderno e foco em resultado. Já concluí <strong style="color: var(--primary);">mais de 54 projetos</strong> para diferentes negócios.</p>
+                    <p>Tecnóloga em Ciência de Dados, especialista em criar páginas, catálogos, dashboards e ferramentas digitais com visual moderno e foco em resultado. Já concluí <strong style="color: var(--primary);">mais de 60 projetos</strong> para diferentes negócios e órgãos públicos.</p>
 
                     <ul class="about-list">
                         <li><i class="fa-solid fa-check"></i> Sites, páginas e catálogos com visual sofisticado</li>
-                        <li><i class="fa-solid fa-check"></i> Soluções pensadas para WhatsApp e vendas</li>
+                        <li><i class="fa-solid fa-check"></i> Dashboards e painéis no Google Sheets</li>
+                        <li><i class="fa-solid fa-check"></i> Portfólios e currículos interativos</li>
+                        <li><i class="fa-solid fa-check"></i> Páginas para organização de contatos e links</li>
                         <li><i class="fa-solid fa-check"></i> Processo simples: sinal, protótipo, entrega</li>
                     </ul>
 
@@ -1614,12 +1641,36 @@
                     <h3>Dashboards</h3>
                     <p>Painéis com gráficos interativos sincronizados com seus dados.</p>
                 </div>
+
+                <div class="service-card reveal-tilt">
+                    <div class="service-icon"><i class="fa-solid fa-file-alt"></i></div>
+                    <h3>Portfólio & Currículo</h3>
+                    <p>Páginas profissionais para apresentar seu trabalho e trajetória.</p>
+                </div>
+
+                <div class="service-card reveal-tilt">
+                    <div class="service-icon"><i class="fa-solid fa-address-book"></i></div>
+                    <h3>Organização de Contatos</h3>
+                    <p>Páginas interativas para listar contatos e links de forma organizada.</p>
+                </div>
+
+                <div class="service-card reveal-tilt">
+                    <div class="service-icon"><i class="fa-solid fa-table"></i></div>
+                    <h3>Consolidados no Sheets</h3>
+                    <p>Painéis e relatórios dinâmicos no Google Sheets para gestão.</p>
+                </div>
+
+                <div class="service-card reveal-tilt">
+                    <div class="service-icon"><i class="fa-solid fa-link"></i></div>
+                    <h3>Páginas de Links</h3>
+                    <p>Organize todos os seus links importantes em uma página interativa.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================
-    PROJETOS
+    PROJETOS (AMPLIADO)
     ============================================================ -->
     <section class="section" id="projetos">
         <div class="container">
@@ -1630,43 +1681,96 @@
             </div>
 
             <div class="projects-grid">
+                <!-- Portfólio -->
                 <div class="project-card reveal-tilt">
-                    <div class="project-media">
-                        <img src="https://raw.githubusercontent.com/datadeshsolucoes-design/servicosdigitais/main/filtros%20com%20graficos%20interativos.png" alt="Dashboard Filtros">
+                    <div class="project-media" style="background: linear-gradient(135deg, #0a1628, #1a3a6b); display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-briefcase" style="font-size: 4rem; color: var(--primary); opacity: 0.3;"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Dashboard para Gestão</h3>
-                        <p>Painel com gráficos interativos e filtros dinâmicos</p>
+                        <h3>Portfólio Profissional</h3>
+                        <p>Página completa para apresentação de projetos e habilidades.</p>
+                        <a href="https://anadesenvolvedora.github.io/portifolio/#sobre" target="_blank" class="project-link">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
                         <div class="project-tags">
-                            <span>Chart.js</span>
+                            <span>HTML/CSS</span>
                             <span>JavaScript</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Currículo -->
                 <div class="project-card reveal-tilt">
-                    <div class="project-media">
-                        <img src="https://raw.githubusercontent.com/datadeshsolucoes-design/servicosdigitais/main/graficos%20interativos.png" alt="Dashboards Interativos">
+                    <div class="project-media" style="background: linear-gradient(135deg, #0a1628, #1a3a6b); display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-file-alt" style="font-size: 4rem; color: var(--primary); opacity: 0.3;"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Dashboards Interativos</h3>
-                        <p>Gráficos sincronizados e visual profissional</p>
+                        <h3>Currículo Interativo</h3>
+                        <p>Currículo profissional com layout moderno e animações.</p>
+                        <a href="https://anadesenvolvedora.github.io/curriculo/" target="_blank" class="project-link">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
                         <div class="project-tags">
-                            <span>Google Sheets</span>
-                            <span>Chart.js</span>
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Painel no Google Sheets -->
                 <div class="project-card reveal-tilt">
-                    <div class="project-media">
-                        <img src="https://raw.githubusercontent.com/datadeshsolucoes-design/servicosdigitais/main/area%20de%20trabalho.png" alt="Dashboard Área de Trabalho">
+                    <div class="project-media" style="background: linear-gradient(135deg, #0a1628, #1a3a6b); display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-table" style="font-size: 4rem; color: var(--primary); opacity: 0.3;"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Dashboard Profissional</h3>
-                        <p>Páginas modernas que transmitem credibilidade</p>
+                        <h3>Painel no Google Sheets</h3>
+                        <p>Consolidado de dados com gráficos e filtros dinâmicos.</p>
+                        <a href="https://docs.google.com/spreadsheets/d/1JcUzW28VGqYHqSBamvDj_-OeTWKDxKsiL9UBX17ejnk/edit?gid=123637652#gid=123637652" target="_blank" class="project-link">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="project-tags">
+                            <span>Google Sheets</span>
+                            <span>Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contatos Telefônicos -->
+                <div class="project-card reveal-tilt">
+                    <div class="project-media" style="background: linear-gradient(135deg, #0a1628, #1a3a6b); display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-address-book" style="font-size: 4rem; color: var(--primary); opacity: 0.3;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Organização de Contatos</h3>
+                        <p>Página interativa para listar contatos telefônicos organizados.</p>
+                        <a href="https://regulacaoconsolidados-dot.github.io/contatosdasubs/" target="_blank" class="project-link">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
                         <div class="project-tags">
                             <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links Interativos -->
+                <div class="project-card reveal-tilt">
+                    <div class="project-media" style="background: linear-gradient(135deg, #0a1628, #1a3a6b); display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-link" style="font-size: 4rem; color: var(--primary); opacity: 0.3;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Página de Links</h3>
+                        <p>Organização de links importantes em uma página interativa.</p>
+                        <a href="https://regulacaoconsolidados-dot.github.io/linksteleconsulta/?utm_source=chatgpt.com" target="_blank" class="project-link">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>Links</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Interativo -->
+                <div class="project-card reveal-tilt">
+                    <div class="project-media">
+                        <img src="https://raw.githubusercontent.com/datadeshsolucoes-design/servicosdigitais/main/filtros%20com%20graficos%20interativos.png" alt="Dashboard Filtros">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Interativo</h3>
+                        <p>Painel com gráficos interativos e filtros dinâmicos.</p>
+                        <div class="project-tags">
+                            <span>Chart.js</span>
                             <span>JavaScript</span>
                         </div>
                     </div>
@@ -1859,6 +1963,9 @@
                         <option value="Catálogo digital">📱 Catálogo digital</option>
                         <option value="Página para clínica">🏥 Página para clínica</option>
                         <option value="Dashboard">📊 Dashboard</option>
+                        <option value="Portfólio ou currículo">📄 Portfólio ou currículo</option>
+                        <option value="Página de contatos ou links">📇 Página de contatos/links</option>
+                        <option value="Painel no Google Sheets">📊 Painel no Google Sheets</option>
                         <option value="Suporte técnico">🔧 Suporte técnico</option>
                         <option value="Outro">✨ Outro</option>
                     </select>
